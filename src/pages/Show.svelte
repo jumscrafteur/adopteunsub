@@ -294,12 +294,16 @@
 
 <!-- Toi -->
 <AnswerEmbed reponse={toi[0].reponse}>🔗 Amis déja présent</AnswerEmbed>
-<AnswerEmbed reponse={toi[1].reponse}>📈 Ces Objectifs</AnswerEmbed>
+<AnswerEmbed reponse={toi[1].reponse}>📈 Ses Objectifs</AnswerEmbed>
 <AnswerEmbed choixs={toi[2].choix} reponse={toi[2].reponse}>💬 Réseau Préféré pour papoter</AnswerEmbed>
+<AnswerEmbed choixs={toi[3].choix} reponse={toi[3].reponse}>😍 Ses hobbies dans la vie</AnswerEmbed>
 
 <!-- Fun -->
 <AnswerEmbed choixs={fun[0].choix} reponse={fun[0].reponse}>⭐️ Star Wars préféré</AnswerEmbed>
 <AnswerEmbed choixs={fun[1].choix} reponse={fun[1].reponse}>🧙‍♂️ Maison dans Harry Potter</AnswerEmbed>
+<AnswerEmbed choixs={fun[1].choix} reponse={fun[2].reponse}>🦸 Son héros marvel préféré</AnswerEmbed>
+<AnswerEmbed choixs={fun[1].choix} reponse={fun[3].reponse}>🖋 Sa devise</AnswerEmbed>
+<AnswerEmbed choixs={fun[1].choix} reponse={fun[4].reponse}>😈 Son score de pureté</AnswerEmbed>
 
 <!-- Plutot -->
 <Plutot {plutot}>🎭 Il est plutot ...</Plutot>
