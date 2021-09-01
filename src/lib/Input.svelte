@@ -3,6 +3,7 @@
     export let type = "text"
     export let choix = []
     export let value = ""
+    export let link = ""
 
     const handleInput = e => {
     value = e.target.value;
@@ -28,18 +29,18 @@
 
 
 {#if type=="textarea"}
-<label for="{name}"><slot></slot></label>
+<label for="{name}"><slot></slot>{#if link} <a href="{link}" target="_blank">🔗</a> {/if}</label>
 
     <textarea name="{name || ""}" id="{name || ""}" bind:value on:input={handleResize} min-rows="2"></textarea>
 {:else if type=="radio"}
-<label for="{name}"><slot></slot></label>
+<label for="{name}"><slot></slot>{#if link} <a href="{link}" target="_blank">🔗</a>{/if}</label>
 <ul>
         {#each choix as possibilite, i}
         <li><input type="radio" bind:group={value} value={possibilite} {name} id="{name +  possibilite}"><label for="{name +  possibilite}">{possibilite}</label></li>
         {/each}
     </ul>
 {:else}
-<label for="{name}"><slot></slot></label>
+<label for="{name}"><slot></slot>{#if link}<a href="{link}" target="_blank" > 🔗 </a>{/if}</label>
 
     <input type={type} name="{name || ""}" id="{name || ""}" {value}  on:input={handleInput}>
     
@@ -99,5 +100,10 @@
     label{
         white-space: pre-wrap;
         position: relative;
+    }
+
+    a{
+        padding: 0 .5rem;
+        text-decoration: none;
     }
 </style>

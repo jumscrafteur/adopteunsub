@@ -66,6 +66,11 @@
                 type:"radio",
                 choix:["Insta","Snap","Whattsap","Discord","Email"],
             },
+            {
+                name:"hobbies",
+                question:"Tu as une passion dans la vie ? ",
+                reponse:"",
+            },
             ],
             fun : [
             {
@@ -81,6 +86,21 @@
                 type:"radio",
                 choix:["Je ne suis pas une sorcier ...","Gryffondor", "Poufsouffle","Serdaigle","Serpentard"],
                 reponse:"Je ne suis pas une sorcier ..."
+            },
+            {
+                name:"marvel",
+                question:"Quel est ton héros marvel préféré ?",
+            },
+            {
+                name:"devise",
+                question:"Quelle serait ta devise ?",
+                type:"textarea"
+            },
+            {
+                name:"purete",
+                question:"Quel est ton score au test de pureté",
+                link:"https://www.test-griffor.com",
+                type:"number"
             },
             ],
             plutot:[
@@ -203,27 +223,27 @@
 
 <h2>Questions relous 😴</h2>
 {#each questions.relou as question}
-<Input name="{question.name}" type="{question.type}" bind:value={question.reponse} choix="{question.choix}">{question.question}</Input> 
+    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}" link={question.link}>{question.question}</Input> 
 {/each}
 
 <h2>Dis m'en un peu plus sur toi 😳</h2>
 {#each questions.toi as question}
-    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}">{question.question}</Input> 
+    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}" link={question.link}>{question.question}</Input> 
 {/each}
 
 <h2>Aller, Juste pour le fun 😌</h2>
 {#each questions.fun as question}
-    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}">{question.question}</Input> 
+    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}" link={question.link}>{question.question}</Input> 
 {/each}
 
 <h2>T'es plutôt ... 🤔</h2>
 {#each questions.plutot as question}
-    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}">{question.question}</Input> 
+    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}" link={question.link}>{question.question}</Input> 
 {/each}
 
 <h2>Un peu de musique ? 🎶</h2>
 {#each questions.musique as question}
-    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}">{question.question}</Input> 
+    <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}" link={question.link}>{question.question}</Input> 
 {/each}
 
 <h2>Et pour finir 👀</h2>
