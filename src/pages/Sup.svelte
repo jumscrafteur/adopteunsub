@@ -49,7 +49,7 @@
             toi : [
             {
                 name:"amis",
-                question:"Déjà des potes dans la promo ?\nSi oui donne leur petit nom",
+                question:"Déjà des potes dans la chez les sup/spe ?\nSi oui donne leur petit nom",
                 reponse:"",
                 type:"textarea"
             },
