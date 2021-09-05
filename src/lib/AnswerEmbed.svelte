@@ -55,6 +55,7 @@
         overflow-y: visible;
         overflow-x: scroll;
         width: calc(100vw - 1rem);
+        max-width: 100%;
         justify-content: space-between;
         gap: .5rem;
 
