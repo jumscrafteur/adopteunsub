@@ -42,6 +42,7 @@
   async function getAllSup() {
     try {
       let query = await db.collection("sup").where("isVerified", "==", true).get()
+      console.log([...query.docs].map(doc => doc.data()))
       return [...query.docs].map(doc => doc.data())
     } catch (e) {
       return []
@@ -85,9 +86,9 @@
     <div>
       {#each sups as sup}
         <Card 
-          nom={sup.relou[0].reponse}
-          prenom={sup.relou[1].reponse} 
-          lycee={sup.relou[3].reponse} 
+          nom={sup.sections[0].questions[0].reponse}
+          prenom={sup.sections[0].questions[1].reponse} 
+          lycee={sup.sections[0].questions[4].reponse} 
           active={user.likes.includes(sup.id)} 
           id={sup.id}
           on:add={(e) => {adopt(e.detail.id)}}
