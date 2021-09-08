@@ -41,7 +41,7 @@
 
   async function getAllSup() {
     try {
-      let query = await db.collection("sup").where("isVerified", "==", false).get()
+      let query = await db.collection("sup").where("isVerified", "==", true).get()
       console.log([...query.docs].map(doc => doc.data()))
       return [...query.docs].map(doc => doc.data())
     } catch (e) {
