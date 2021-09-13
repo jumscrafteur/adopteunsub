@@ -79,7 +79,7 @@
 <!-- <pre>{JSON.stringify(user)}</pre> -->
 
 <!-- {#if loading || !user.isVerified } -->
-{#if loading }
+{#if loading && sups.length > 0 }
   <Loading/>
 {:else}
   {#if  user.isVerified && sups.length > 0}

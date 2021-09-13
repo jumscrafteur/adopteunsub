@@ -54,7 +54,7 @@
         <h2>{section.sectionTitle}</h2>
         {#each section.questions as question}
 
-                <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}">{question.question}</Input> 
+                <Input name="{question.name}" type="{question.type}"bind:value={question.reponse} choix="{question.choix}" link="{question.link}">{question.question}</Input> 
 
         {/each}
     {/each}
