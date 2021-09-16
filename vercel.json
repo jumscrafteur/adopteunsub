@@ -1,7 +1,9 @@
 ﻿{
+    "version": 2,
+    "name": "adopteunsup",
     "rewrites": [
         {
-            "source": "/(.*)",
+            "source": "/*",
             "destination": "/"
         }
     ]
