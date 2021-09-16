@@ -23,7 +23,7 @@
 
 <div class="card" class:active>
   <div class="text" on:click={click}>
-    <p class="title">{nom} {prenom[0]}.</p>
+    <p class="title">{prenom} {nom[0]}.</p>
     <p class="subtitle">{lycee}</p>
   </div>
   <div class="icon" class:active on:click={addSup}>
