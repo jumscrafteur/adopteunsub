@@ -3,7 +3,7 @@
     "name": "adopteunsup",
     "rewrites": [
         {
-            "source": "/(.*)",
+            "source": "/*",
             "destination": "/"
         }
     ]
